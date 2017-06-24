@@ -1,0 +1,28 @@
+version: "3"
+services:
+
+  jekyll:
+    build:
+      dockerfile: Dockerfile
+      context: .docker/jekyll
+    image: dohjon/jekyll
+    ports:
+      - 3000:3000
+    networks: 
+      - jekyll-network
+    volumes:
+     - .:/custom
+
+  node:
+    build:
+      dockerfile: Dockerfile
+      context: .docker/node
+    image: dohjon/node
+    networks:
+      - jekyll-network
+    volumes:
+     - .:/custom
+
+networks: 
+  jekyll-network:
+    driver: "bridge"
