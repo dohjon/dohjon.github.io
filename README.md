@@ -17,5 +17,5 @@
 # Create new Jekyll site.
 # --force - Create new site in cwd even if other files are present.
 # --blank - Skip starting boilerplate theme
-./dev.sh jekyll new --force --blank .
+./dev.sh jekyll new --force .
 ```
