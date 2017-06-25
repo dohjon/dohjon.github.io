@@ -7,11 +7,11 @@ services:
       context: .docker/jekyll
     image: dohjon/jekyll
     ports:
-      - 3000:3000
+      - 4000:4000
     networks: 
       - jekyll-network
     volumes:
-     - .:/custom
+     - .:/srv/jekyll
 
   node:
     build:

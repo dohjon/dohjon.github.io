@@ -10,7 +10,7 @@ if [ $# -gt 0 ]; then
     if [ "$1" == "jekyll" ]; then
         shift 1
         $COMPOSE run --rm \
-            -w /custom \
+            -w /srv/jekyll \
             jekyll \
             jekyll "$@"
 
